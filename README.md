@@ -26,7 +26,7 @@
 
 ## GitHub Pages 发布
 
-仓库已加入 GitHub Pages 部署流程。发布成功后，默认访问地址通常是：
+仓库已公开，并已加入 GitHub Pages 部署流程。发布成功后，默认访问地址通常是：
 
 https://toj1-27.github.io/JITAI/
 
