@@ -18,10 +18,23 @@
 - `assets/styles.css`：网站样式
 - `assets/app.js`：产品数据与表单交互
 - `tests/smoke.ps1`：规格检查脚本
+- `.github/workflows/pages.yml`：GitHub Pages 自动部署流程
 
 ## 本地查看
 
 直接打开 `index.html` 即可预览网站。
+
+## GitHub Pages 发布
+
+仓库已加入 GitHub Pages 部署流程。发布成功后，默认访问地址通常是：
+
+https://toj1-27.github.io/JITAI/
+
+如果首次没有自动发布，请在 GitHub 仓库中打开：
+
+`Settings` -> `Pages` -> `Build and deployment`
+
+然后把 Source 设置为 `GitHub Actions`，保存后进入 `Actions` 页面重新运行 `Deploy static site to GitHub Pages`。
 
 ## 后续替换内容
 
