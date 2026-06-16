@@ -67,8 +67,12 @@ foreach ($social in @("Facebook", "TikTok", "WhatsApp")) {
 
 Assert-True ($html.Contains("Shandong Jitai Machinery Co., Ltd.")) "English company name should be present"
 Assert-True ($html.Contains("Send Inquiry")) "English inquiry CTA should be present"
+Assert-True ($html.Contains("data-lang-toggle")) "Language control should be a real toggle"
+Assert-True (-not $html.Contains("class=""language-link"" href=""#contact""")) "Language control should not jump to contact"
 Assert-True ($js.Contains("URLSearchParams")) "App should be ready to read social source parameters"
 Assert-True ($js.Contains("inquiry-success")) "App should expose inquiry success state"
+Assert-True ($js.Contains("translations")) "App should contain translation data"
+Assert-True ($js.Contains("setLanguage")) "App should implement language switching"
 Assert-True ($css.Contains("@media")) "CSS should include responsive styles"
 
 Write-Host "Smoke checks passed."
