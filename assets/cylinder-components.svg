@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Hydraulic cylinder component diagram placeholder">
+  <defs>
+    <linearGradient id="tube" x1="0" x2="1">
+      <stop offset="0" stop-color="#315d78"/>
+      <stop offset="1" stop-color="#173247"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" x2="1">
+      <stop offset="0" stop-color="#f5f8fa"/>
+      <stop offset="1" stop-color="#9aaebb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="#eef3f7"/>
+  <path d="M70 560h1060" stroke="#c6d3dd" stroke-width="12" stroke-linecap="round"/>
+  <rect x="210" y="310" width="520" height="118" rx="16" fill="url(#tube)"/>
+  <rect x="270" y="340" width="400" height="58" rx="8" fill="#213c51" opacity=".78"/>
+  <rect x="690" y="350" width="315" height="30" rx="15" fill="url(#steel)"/>
+  <rect x="120" y="290" width="140" height="158" rx="20" fill="#b82731"/>
+  <rect x="970" y="310" width="120" height="118" rx="18" fill="#c5d2dc"/>
+  <circle cx="190" cy="370" r="42" fill="none" stroke="#f4f7fa" stroke-width="14"/>
+  <circle cx="1030" cy="370" r="34" fill="none" stroke="#294f69" stroke-width="12"/>
+  <g fill="#122333" font-family="Arial, sans-serif" font-size="22" font-weight="700">
+    <text x="126" y="246">Base Mount</text>
+    <text x="285" y="280">Cylinder Tube / Barrel</text>
+    <text x="505" y="470">Piston</text>
+    <text x="765" y="335">Piston Rod</text>
+    <text x="930" y="474">Rod-End Mount</text>
+  </g>
+  <g stroke="#b82731" stroke-width="4" stroke-linecap="round">
+    <path d="M180 258v32"/>
+    <path d="M430 290v20"/>
+    <path d="M535 450v-36"/>
+    <path d="M820 342v-34"/>
+    <path d="M1010 450v-28"/>
+  </g>
+  <text x="70" y="92" fill="#122333" font-family="Arial, sans-serif" font-size="36" font-weight="800">Custom Hydraulic Cylinder Structure</text>
+  <text x="70" y="132" fill="#627181" font-family="Arial, sans-serif" font-size="22">Neutral placeholder diagram for component introduction</text>
+</svg>
