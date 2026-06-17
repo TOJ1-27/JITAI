@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" role="img" aria-label="Hydraulic components">
+  <rect width="260" height="160" rx="8" fill="#f5f8fb"/>
+  <circle cx="72" cy="82" r="28" fill="#294f69"/>
+  <circle cx="72" cy="82" r="12" fill="#f5f8fb"/>
+  <rect x="116" y="56" width="54" height="54" rx="8" fill="#b82731"/>
+  <circle cx="143" cy="83" r="12" fill="#f5f8fb"/>
+  <path d="M196 56h18l12 26-12 26h-18l12-26-12-26Z" fill="#122333"/>
+  <path d="M48 122h168" stroke="#d8e1ea" stroke-width="4" stroke-linecap="round"/>
+</svg>
