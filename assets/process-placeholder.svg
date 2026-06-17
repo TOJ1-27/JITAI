@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Manufacturing process placeholder">
+  <rect width="900" height="560" fill="#edf2f6"/>
+  <rect x="88" y="130" width="724" height="290" rx="18" fill="#ffffff"/>
+  <path d="M150 350h600" stroke="#d8e1ea" stroke-width="16" stroke-linecap="round"/>
+  <rect x="160" y="238" width="170" height="110" rx="10" fill="#294f69"/>
+  <rect x="365" y="202" width="170" height="146" rx="10" fill="#173247"/>
+  <rect x="570" y="260" width="170" height="88" rx="10" fill="#b82731"/>
+  <circle cx="246" cy="382" r="24" fill="#c6d3dd"/>
+  <circle cx="450" cy="382" r="24" fill="#c6d3dd"/>
+  <circle cx="654" cy="382" r="24" fill="#c6d3dd"/>
+  <text x="90" y="90" fill="#122333" font-family="Arial, sans-serif" font-size="36" font-weight="800">Workshop / Inspection Placeholder</text>
+  <text x="90" y="466" fill="#627181" font-family="Arial, sans-serif" font-size="22">Replace with verified factory, machining, assembly or pressure testing photos.</text>
+</svg>
