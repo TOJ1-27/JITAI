@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" role="img" aria-label="Hydraulic system">
+  <rect width="260" height="160" rx="8" fill="#f5f8fb"/>
+  <rect x="48" y="52" width="78" height="64" rx="8" fill="#294f69"/>
+  <rect x="62" y="66" width="50" height="8" rx="4" fill="#d8e1ea"/>
+  <rect x="62" y="84" width="34" height="8" rx="4" fill="#d8e1ea"/>
+  <circle cx="154" cy="84" r="26" fill="#b82731"/>
+  <circle cx="154" cy="84" r="12" fill="#f5f8fb"/>
+  <path d="M126 82h18M180 82h32M212 82v-28" stroke="#122333" stroke-width="8" stroke-linecap="round"/>
+  <path d="M184 110h34" stroke="#5f8aaa" stroke-width="8" stroke-linecap="round"/>
+</svg>
