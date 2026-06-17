@@ -11,10 +11,6 @@ function Assert-True($condition, $message) {
   }
 }
 
-function U([int[]]$codes) {
-  return -join ($codes | ForEach-Object { [char]$_ })
-}
-
 Assert-True (Test-Path $indexPath) "index.html should exist"
 Assert-True (Test-Path $stylesPath) "assets/styles.css should exist"
 Assert-True (Test-Path $appPath) "assets/app.js should exist"
@@ -23,71 +19,124 @@ $html = Get-Content -LiteralPath $indexPath -Raw -Encoding UTF8
 $css = Get-Content -LiteralPath $stylesPath -Raw -Encoding UTF8
 $js = Get-Content -LiteralPath $appPath -Raw -Encoding UTF8
 
-$navItems = @(
-  (U @(0x9996, 0x9875)),
-  (U @(0x4EA7, 0x54C1, 0x4E2D, 0x5FC3)),
-  (U @(0x5173, 0x4E8E, 0x6211, 0x4EEC)),
-  (U @(0x8054, 0x7CFB, 0x8BE2, 0x4EF7))
-)
-
-foreach ($nav in $navItems) {
-  Assert-True ($html.Contains($nav)) "Navigation should contain required item"
+foreach ($required in @(
+  'class="video-hero"',
+  'data-hero-video',
+  'class="product-strip"',
+  'data-product-strip',
+  'class="component-band"',
+  'Key Components and Custom Design Options',
+  'data-rfq-form',
+  'Drawing / File Upload',
+  'data-social-links',
+  'data-lang-toggle'
+)) {
+  Assert-True ($html.Contains($required)) "Homepage should contain $required"
 }
 
-$products = @(
-  (U @(0x6DB2, 0x538B, 0x6CB9, 0x7F38)),
-  (U @(0x4F38, 0x7F29, 0x6CB9, 0x7F38)),
-  (U @(0x6DB2, 0x538B, 0x7CFB, 0x7EDF))
-)
-
-foreach ($product in $products) {
-  Assert-True ($js.Contains($product)) "Product data should contain required product type"
+foreach ($removed in @(
+  'class="cylinder-detail"',
+  'class="category-section"',
+  'class="type-section"',
+  'class="manufacturing-section"',
+  'Product Type Overview',
+  'Manufacturing Capabilities',
+  'Home / Products / Custom Hydraulic Cylinders',
+  'Request a Quote'
+)) {
+  Assert-True (-not $html.Contains($removed)) "Removed section should not remain: $removed"
 }
 
-$fields = @(
-  "Full Name",
-  "Business Email",
-  "Phone / WhatsApp",
-  "Country / Region",
-  "Product Type",
-  "Application / Equipment",
-  "Bore Diameter",
-  "Rod Diameter",
-  "Stroke",
-  "Working Pressure",
-  "Required Quantity",
-  "Target Delivery Date",
-  "Project Details"
-)
-
-foreach ($field in $fields) {
-  Assert-True ($html.Contains($field)) "RFQ form should contain required field"
+foreach ($removedJs in @(
+  'cylinderCategories',
+  'cylinderFeatures',
+  'cylinderTypes',
+  'manufacturingCapabilities',
+  'renderManufacturingCapabilities',
+  'renderCylinderTypes',
+  'renderCylinderCategories'
+)) {
+  Assert-True (-not $js.Contains($removedJs)) "Removed data/function should not remain: $removedJs"
 }
 
-foreach ($social in @("Facebook", "TikTok", "WhatsApp")) {
-  Assert-True (($html.Contains($social) -or $js.Contains($social))) "Site should reserve social link or field"
+foreach ($removedCss in @(
+  '.detail-hero',
+  '.category-card',
+  '.type-card',
+  '.manufacturing-card',
+  '.capability-grid',
+  '.feature-section'
+)) {
+  Assert-True (-not $css.Contains($removedCss)) "Removed styles should not remain: $removedCss"
 }
 
-Assert-True ($html.Contains("Shandong Jitai Machinery Co., Ltd.")) "English company name should be present"
-Assert-True ($html.Contains("Send Your Drawing")) "Hero drawing CTA should be present"
-Assert-True ($html.Contains("data-lang-toggle")) "Language control should be a real toggle"
-Assert-True (-not $html.Contains("class=""language-link"" href=""#contact""")) "Language control should not jump to contact"
-Assert-True ($html.Contains("<video")) "Homepage should include video hero"
-Assert-True ($html.Contains("data-video-toggle")) "Video hero should include play pause control"
-Assert-True ($html.Contains("Custom Hydraulic Cylinders")) "Product detail section should exist"
-Assert-True ($html.Contains("Tell Us About Your Hydraulic Cylinder Project")) "RFQ section should exist"
-Assert-True ($html.Contains("Drawing / File Upload")) "RFQ form should include file upload"
-Assert-True ($html.Contains("I agree to the processing of my information")) "RFQ form should include privacy consent"
-Assert-True ($html.Contains("Follow Jitai Hydraulic")) "Social follow section should exist"
-Assert-True ($js.Contains("URLSearchParams")) "App should be ready to read social source parameters"
-Assert-True ($js.Contains("siteConfig")) "App should centralize site configuration"
-Assert-True ($js.Contains("quoteEndpoint")) "App should define quote endpoint configuration"
-Assert-True ($js.Contains("validateFile")) "App should validate uploaded files"
-Assert-True ($js.Contains("bindRfqForm")) "App should bind RFQ form behavior"
-Assert-True ($js.Contains("translations")) "App should contain translation data"
-Assert-True ($js.Contains("setLanguage")) "App should implement language switching"
-Assert-True ($js.Contains("socialLinks")) "App should centralize social links"
-Assert-True ($css.Contains("@media")) "CSS should include responsive styles"
-Assert-True ($css.Contains("prefers-reduced-motion")) "CSS should respect reduced motion"
+foreach ($product in @(
+  'Hydraulic Cylinders',
+  'Telescopic Cylinders',
+  'Hydraulic Systems',
+  'Electric Cylinders',
+  'Hydraulic Power Units',
+  'Hydraulic Components'
+)) {
+  Assert-True ($js.Contains($product)) "Product data should contain $product"
+}
+
+foreach ($asset in @(
+  'assets/product-hydraulic-cylinder.svg',
+  'assets/product-telescopic-cylinder.svg',
+  'assets/product-hydraulic-system.svg',
+  'assets/product-electric-cylinder.svg',
+  'assets/product-power-unit.svg',
+  'assets/product-components.svg'
+)) {
+  Assert-True ($js.Contains($asset)) "Product category should use distinct image $asset"
+  Assert-True (Test-Path (Join-Path $root $asset)) "Product image should exist: $asset"
+}
+
+foreach ($component in @(
+  'Base Mount',
+  'Head / Gland',
+  'Piston',
+  'Piston Rod',
+  'Rod-End Mount',
+  'Cylinder Tube / Barrel',
+  'End Cap',
+  'Hydraulic Ports',
+  'Sealing System',
+  'Surface Treatment'
+)) {
+  Assert-True ($js.Contains($component)) "Component list should contain $component"
+}
+
+foreach ($social in @(
+  'YouTube',
+  'Facebook',
+  'X',
+  'LinkedIn',
+  'TikTok',
+  'Instagram'
+)) {
+  Assert-True ($js.Contains($social)) "Social config should contain $social"
+}
+
+Assert-True ($js.Contains('<button class="social-icon is-disabled"')) "Empty social URLs should render disabled buttons"
+Assert-True (-not $js.Contains('href="#"')) "Social icons should not use fake hash links"
+Assert-True ($js.Contains('localStorage.getItem("jitaiLanguage") || "en"')) "Default language should be English"
+Assert-True ($js.Contains('localStorage.setItem("jitaiLanguage"')) "Language selection should persist"
+Assert-True ($js.Contains('document.documentElement.lang')) "HTML lang should update"
+Assert-True ($js.Contains('data-i18n-placeholder')) "Placeholders should be translated"
+Assert-True ($js.Contains('data-i18n-aria-label')) "Aria labels should be translated"
+Assert-True ($js.Contains('data-i18n-alt')) "Image alt text should be translated"
+Assert-True ($js.Contains('error_required')) "RFQ validation text should be translated"
+Assert-True ($js.Contains('error_endpoint')) "RFQ endpoint warning should be translated"
+Assert-True ($js.Contains('Official account coming soon')) "Social disabled tooltip should be translated"
+
+Assert-True ($css.Contains('grid-template-columns: repeat(6')) "Desktop product entries should fit in one row"
+Assert-True ($css.Contains('grid-template-columns: repeat(4')) "Tablet product entries should use four columns"
+Assert-True ($css.Contains('scroll-snap-type: x mandatory')) "Mobile product entries should use horizontal snap scrolling"
+Assert-True ($css.Contains('.component-band')) "Components should use a dark divider section"
+Assert-True ($css.Contains('.social-icon.is-disabled')) "Disabled social icons should be styled"
+Assert-True ($css.Contains('overflow-x: hidden')) "Page should prevent horizontal overflow"
+Assert-True ($css.Contains('prefers-reduced-motion')) "CSS should respect reduced motion"
 
 Write-Host "Smoke checks passed."
