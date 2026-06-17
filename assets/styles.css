@@ -53,7 +53,10 @@ textarea {
   inset: 0 0 auto;
   z-index: 20;
   color: var(--white);
-  transition: background 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
 }
 
 .site-header.is-scrolled,
@@ -331,8 +334,15 @@ textarea {
 }
 
 @keyframes cue {
-  0%, 100% { translate: 0 0; opacity: 0.55; }
-  50% { translate: 0 8px; opacity: 1; }
+  0%,
+  100% {
+    translate: 0 0;
+    opacity: 0.55;
+  }
+  50% {
+    translate: 0 8px;
+    opacity: 1;
+  }
 }
 
 .section {
@@ -388,7 +398,9 @@ textarea {
   background: var(--white);
   padding: 16px 12px 14px;
   text-align: center;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .product-entry:hover,
@@ -764,7 +776,10 @@ textarea:focus {
   background: rgba(255, 255, 255, 0.08);
   color: var(--white);
   padding: 0;
-  transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .social-icon svg {
@@ -791,12 +806,24 @@ textarea:focus {
   cursor: not-allowed;
 }
 
-.social-icon[aria-label^="YouTube"] { color: #ff0033; }
-.social-icon[aria-label^="Facebook"] { color: #1877f2; }
-.social-icon[aria-label^="X"] { color: #ffffff; }
-.social-icon[aria-label^="LinkedIn"] { color: #0a66c2; }
-.social-icon[aria-label^="TikTok"] { color: #ffffff; }
-.social-icon[aria-label^="Instagram"] { color: #e4405f; }
+.social-icon[aria-label^="YouTube"] {
+  color: #ff0033;
+}
+.social-icon[aria-label^="Facebook"] {
+  color: #1877f2;
+}
+.social-icon[aria-label^="X"] {
+  color: #ffffff;
+}
+.social-icon[aria-label^="LinkedIn"] {
+  color: #0a66c2;
+}
+.social-icon[aria-label^="TikTok"] {
+  color: #ffffff;
+}
+.social-icon[aria-label^="Instagram"] {
+  color: #e4405f;
+}
 
 .social-todo {
   text-align: right;
@@ -904,7 +931,7 @@ textarea:focus {
 @media (max-width: 767px) {
   .nav-shell,
   .section {
-    width: min(100% - 26px, 1240px);
+    width: min(100% - 26px, 390px);
   }
 
   .brand strong {
@@ -919,12 +946,21 @@ textarea:focus {
     display: none;
   }
 
+  .video-hero-content {
+    width: min(100% - 40px, 350px);
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
   .video-hero h1 {
-    font-size: 36px;
+    font-size: 32px;
+    line-height: 1.12;
+    overflow-wrap: anywhere;
   }
 
   .hero-lead {
     font-size: 16px;
+    overflow-wrap: anywhere;
   }
 
   .video-controls {
