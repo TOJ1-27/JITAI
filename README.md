@@ -1,36 +1,41 @@
-# 山东吉泰机械有限公司官网
+# Shandong Jitai Machinery Co., Ltd. Website
 
-山东吉泰机械有限公司官方网站静态版，面向国内工业客户与海外采购客户，重点承接液压缸产品展示、按图定制询价、出口业务线索和社媒落地访问。
+Static official website for Shandong Jitai Machinery Co., Ltd., focused on hydraulic product presentation, export inquiry conversion, social traffic landing, and RFQ collection.
 
-## 已包含
+## Current Structure
 
-- 全宽视频主视觉，带海报回退、播放/暂停和静音控制
-- 产品中心与液压缸类别入口
-- Custom Hydraulic Cylinders 产品详情结构
-- 液压缸部件与定制设计选项说明
-- 产品类型说明与制造能力展示
-- RFQ 在线询价表，含必填校验、邮箱校验、文件类型/大小校验、隐私同意和反垃圾字段
-- 社媒关注区域，链接从配置读取，未确认链接不渲染
-- 中英文导航与首屏文案切换
-- GitHub Pages 自动部署
+- Fixed header and navigation.
+- Full-screen video Hero with poster fallback, play/pause, and mute controls.
+- Compact product category strip.
+- Dark Key Components visual divider.
+- About Jitai section combining production capacity, export business, quality, and service.
+- RFQ form with required fields, file validation, privacy consent, honeypot field, and endpoint guard.
+- Dark footer utility bar with customer support and six reserved social icons.
+- Copyright footer.
+- Internal English / Chinese language switch with `localStorage` persistence.
+- GitHub Pages deployment workflow.
 
-## 文件说明
+## Files
 
-- `index.html`：网站首页与所有页面区块
-- `assets/styles.css`：视觉样式与响应式布局
-- `assets/app.js`：配置、产品数据、部件数据、视频控制、RFQ 校验和社媒渲染
-- `assets/jitai-hero-poster.svg`：首页视频海报占位图
-- `assets/product-placeholder.svg`：产品图占位
-- `assets/cylinder-components.svg`：液压缸结构示意占位
-- `assets/process-placeholder.svg`：制造/检测图片占位
-- `mobile-preview.html`：手机端预览页
-- `tests/smoke.ps1`：规格检查脚本
-- `.env.example`：后端接口与通知邮箱配置示例
-- `.github/workflows/pages.yml`：GitHub Pages 自动部署流程
+- `index.html`: homepage structure and page anchors.
+- `assets/styles.css`: visual styling and responsive layout.
+- `assets/app.js`: site configuration, product data, social links, translation dictionary, video controls, RFQ validation, and rendering logic.
+- `assets/jitai-hero-poster.svg`: temporary Hero poster.
+- `assets/cylinder-components.svg`: temporary component diagram.
+- `assets/product-hydraulic-cylinder.svg`: temporary hydraulic cylinder category image.
+- `assets/product-telescopic-cylinder.svg`: temporary telescopic cylinder category image.
+- `assets/product-hydraulic-system.svg`: temporary hydraulic system category image.
+- `assets/product-electric-cylinder.svg`: temporary electric cylinder category image.
+- `assets/product-power-unit.svg`: temporary hydraulic power unit category image.
+- `assets/product-components.svg`: temporary hydraulic components category image.
+- `mobile-preview.html`: phone-frame preview page.
+- `tests/smoke.ps1`: static acceptance checks.
+- `.env.example`: future backend endpoint and notification email example.
+- `.github/workflows/pages.yml`: GitHub Pages deployment workflow.
 
-## 配置位置
+## Configuration Locations
 
-在 `assets/app.js` 顶部修改：
+Edit these items near the top of `assets/app.js`:
 
 - `siteConfig.heroVideoMp4`
 - `siteConfig.heroVideoWebm`
@@ -38,49 +43,68 @@
 - `siteConfig.quoteEndpoint`
 - `siteConfig.quoteNotificationEmail`
 - `socialLinks`
+- `products`
+- `componentOptions`
+- `translations`
 
-未确认真实视频、产品图片、社媒账号和 RFQ 后端前，请保留占位或空值，不要填写虚假链接或无法验证的数据。
+Do not add fake product parameters, fake certifications, fake social links, or unverified production data.
 
-## 环境变量
+## Product Image Replacement Paths
 
-后续如接入后端或表单服务，可参考 `.env.example`：
+Replace these temporary files with real product images when available:
+
+- `assets/product-hydraulic-cylinder.svg`
+- `assets/product-telescopic-cylinder.svg`
+- `assets/product-hydraulic-system.svg`
+- `assets/product-electric-cylinder.svg`
+- `assets/product-power-unit.svg`
+- `assets/product-components.svg`
+
+Keep image ratios consistent and avoid stretching.
+
+## Environment Variables
+
+Future backend or form-service integration can refer to `.env.example`:
 
 ```text
 NEXT_PUBLIC_QUOTE_ENDPOINT=
 QUOTE_NOTIFICATION_EMAIL=
 ```
 
-当前静态站不会自动读取服务器环境变量，需要在部署流程或后端服务中接入。
+The current static site does not automatically read server environment variables. A real RFQ backend or form service must be connected before collecting live inquiries.
 
-## 本地查看
+## Local Preview
 
-直接打开 `index.html` 可预览网站。
-打开 `mobile-preview.html` 可查看手机端预览。
+Open `index.html` directly in a browser to preview the site.
 
-## 本地检查
+Open `mobile-preview.html` to inspect the phone-frame preview.
+
+## Local Checks
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File tests/smoke.ps1
 ```
 
-## GitHub Pages 发布
+This project currently has no `package.json`, so there are no configured npm build, TypeScript, or ESLint scripts yet.
 
-发布地址：
+## Published URLs
+
+Main site:
 
 https://toj1-27.github.io/JITAI/
 
-手机端预览：
+Mobile preview:
 
 https://toj1-27.github.io/JITAI/mobile-preview.html
 
-## 待替换真实内容
+## Remaining Real Content TODO
 
-- 企业宣传视频 MP4/WebM
-- 视频海报真实图片
-- 产品类别真实照片
-- 部件结构图或产品剖面图
-- 工厂、加工、装配、检测、包装发货图片
-- 企业邮箱、电话、WhatsApp
-- 官方 LinkedIn、Facebook、YouTube、Instagram、TikTok、X 账号
-- RFQ 后端接口或表单服务
-- 可公开证明的证书、产能、设备、测试数据和案例资料
+- Real company Hero video MP4/WebM.
+- Real Hero poster image.
+- Real product category photos.
+- Real component diagram or cylinder cutaway image.
+- Factory, machining, assembly, inspection, packaging, and shipment photos.
+- Official company email, phone, and WhatsApp.
+- Official YouTube, Facebook, X, LinkedIn, TikTok, and Instagram URLs.
+- RFQ backend endpoint or form service.
+- Publicly verifiable certificates, equipment lists, testing data, production capacity, and case materials.
