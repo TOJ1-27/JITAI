@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" role="img" aria-label="Electric cylinder">
+  <rect width="260" height="160" rx="8" fill="#f5f8fb"/>
+  <rect x="42" y="66" width="64" height="38" rx="6" fill="#122333"/>
+  <rect x="100" y="72" width="78" height="26" rx="13" fill="#294f69"/>
+  <rect x="178" y="80" width="40" height="10" rx="5" fill="#aebdca"/>
+  <circle cx="54" cy="85" r="8" fill="#b82731"/>
+  <path d="m72 78 12 8-12 8" fill="none" stroke="#d8e1ea" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="222" cy="85" r="13" fill="#122333"/>
+  <path d="M42 116h176" stroke="#d8e1ea" stroke-width="4" stroke-linecap="round"/>
+</svg>
