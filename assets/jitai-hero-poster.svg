@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Jitai hydraulic workshop poster placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#101d29"/>
+      <stop offset="0.55" stop-color="#1e4058"/>
+      <stop offset="1" stop-color="#111821"/>
+    </linearGradient>
+    <linearGradient id="rod" x1="0" x2="1">
+      <stop offset="0" stop-color="#eef4f8"/>
+      <stop offset="1" stop-color="#8ba3b5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 680h1600v220H0z" fill="#0b121a" opacity=".72"/>
+  <path d="M120 210h1360v360H120z" fill="#ffffff" opacity=".06"/>
+  <path d="M180 250h1240" stroke="#ffffff" stroke-opacity=".16" stroke-width="4"/>
+  <path d="M180 330h1240" stroke="#ffffff" stroke-opacity=".1" stroke-width="3"/>
+  <path d="M180 410h1240" stroke="#ffffff" stroke-opacity=".1" stroke-width="3"/>
+  <path d="M180 490h1240" stroke="#ffffff" stroke-opacity=".1" stroke-width="3"/>
+  <rect x="338" y="465" width="560" height="116" rx="12" fill="#294f69"/>
+  <rect x="392" y="492" width="454" height="62" rx="6" fill="#17384f"/>
+  <rect x="850" y="512" width="350" height="26" rx="13" fill="url(#rod)"/>
+  <rect x="1180" y="492" width="120" height="66" rx="8" fill="#c5d2dc"/>
+  <circle cx="390" cy="522" r="76" fill="none" stroke="#b82731" stroke-width="18"/>
+  <circle cx="1310" cy="522" r="54" fill="none" stroke="#d8e1ea" stroke-opacity=".72" stroke-width="15"/>
+  <path d="M210 650h1160" stroke="#ffffff" stroke-opacity=".22" stroke-width="10" stroke-linecap="round"/>
+  <text x="120" y="162" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">JITAI HYDRAULIC</text>
+  <text x="120" y="214" fill="#d8e1ea" font-family="Arial, sans-serif" font-size="24">Poster placeholder - replace with real workshop or product video still</text>
+</svg>
