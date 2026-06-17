@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" role="img" aria-label="Telescopic cylinder">
+  <rect width="260" height="160" rx="8" fill="#f5f8fb"/>
+  <rect x="34" y="72" width="86" height="26" rx="13" fill="#122333"/>
+  <rect x="112" y="76" width="55" height="18" rx="9" fill="#294f69"/>
+  <rect x="160" y="79" width="39" height="12" rx="6" fill="#5f8aaa"/>
+  <rect x="194" y="82" width="28" height="6" rx="3" fill="#aebdca"/>
+  <circle cx="34" cy="85" r="17" fill="#b82731"/>
+  <circle cx="34" cy="85" r="6" fill="#f5f8fb"/>
+  <circle cx="226" cy="85" r="13" fill="#122333"/>
+  <path d="M48 52h150" stroke="#d8e1ea" stroke-width="4" stroke-linecap="round"/>
+  <path d="M62 112h126" stroke="#d8e1ea" stroke-width="4" stroke-linecap="round"/>
+</svg>
