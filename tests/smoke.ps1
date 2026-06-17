@@ -37,10 +37,7 @@ foreach ($nav in $navItems) {
 $products = @(
   (U @(0x6DB2, 0x538B, 0x6CB9, 0x7F38)),
   (U @(0x4F38, 0x7F29, 0x6CB9, 0x7F38)),
-  (U @(0x6DB2, 0x538B, 0x7CFB, 0x7EDF)),
-  (U @(0x7535, 0x52A8, 0x7F38)),
-  (U @(0x6DB2, 0x538B, 0x52A8, 0x529B, 0x5355, 0x5143)),
-  (U @(0x6DB2, 0x538B, 0x914D, 0x4EF6))
+  (U @(0x6DB2, 0x538B, 0x7CFB, 0x7EDF))
 )
 
 foreach ($product in $products) {
@@ -48,17 +45,23 @@ foreach ($product in $products) {
 }
 
 $fields = @(
-  (U @(0x8054, 0x7CFB, 0x4EBA)),
-  (U @(0x516C, 0x53F8, 0x540D, 0x79F0)),
-  ((U @(0x7535, 0x8BDD)) + " / WhatsApp"),
-  (U @(0x90AE, 0x7BB1)),
-  (U @(0x6DB2, 0x538B, 0x4EA7, 0x54C1, 0x7C7B, 0x578B)),
-  ((U @(0x56FD, 0x5BB6)) + " / " + (U @(0x5730, 0x533A))),
-  (U @(0x9700, 0x6C42, 0x8BF4, 0x660E))
+  "Full Name",
+  "Business Email",
+  "Phone / WhatsApp",
+  "Country / Region",
+  "Product Type",
+  "Application / Equipment",
+  "Bore Diameter",
+  "Rod Diameter",
+  "Stroke",
+  "Working Pressure",
+  "Required Quantity",
+  "Target Delivery Date",
+  "Project Details"
 )
 
 foreach ($field in $fields) {
-  Assert-True ($html.Contains($field)) "Inquiry form should contain required field"
+  Assert-True ($html.Contains($field)) "RFQ form should contain required field"
 }
 
 foreach ($social in @("Facebook", "TikTok", "WhatsApp")) {
@@ -66,13 +69,25 @@ foreach ($social in @("Facebook", "TikTok", "WhatsApp")) {
 }
 
 Assert-True ($html.Contains("Shandong Jitai Machinery Co., Ltd.")) "English company name should be present"
-Assert-True ($html.Contains("Send Inquiry")) "English inquiry CTA should be present"
+Assert-True ($html.Contains("Send Your Drawing")) "Hero drawing CTA should be present"
 Assert-True ($html.Contains("data-lang-toggle")) "Language control should be a real toggle"
 Assert-True (-not $html.Contains("class=""language-link"" href=""#contact""")) "Language control should not jump to contact"
+Assert-True ($html.Contains("<video")) "Homepage should include video hero"
+Assert-True ($html.Contains("data-video-toggle")) "Video hero should include play pause control"
+Assert-True ($html.Contains("Custom Hydraulic Cylinders")) "Product detail section should exist"
+Assert-True ($html.Contains("Tell Us About Your Hydraulic Cylinder Project")) "RFQ section should exist"
+Assert-True ($html.Contains("Drawing / File Upload")) "RFQ form should include file upload"
+Assert-True ($html.Contains("I agree to the processing of my information")) "RFQ form should include privacy consent"
+Assert-True ($html.Contains("Follow Jitai Hydraulic")) "Social follow section should exist"
 Assert-True ($js.Contains("URLSearchParams")) "App should be ready to read social source parameters"
-Assert-True ($js.Contains("inquiry-success")) "App should expose inquiry success state"
+Assert-True ($js.Contains("siteConfig")) "App should centralize site configuration"
+Assert-True ($js.Contains("quoteEndpoint")) "App should define quote endpoint configuration"
+Assert-True ($js.Contains("validateFile")) "App should validate uploaded files"
+Assert-True ($js.Contains("bindRfqForm")) "App should bind RFQ form behavior"
 Assert-True ($js.Contains("translations")) "App should contain translation data"
 Assert-True ($js.Contains("setLanguage")) "App should implement language switching"
+Assert-True ($js.Contains("socialLinks")) "App should centralize social links"
 Assert-True ($css.Contains("@media")) "CSS should include responsive styles"
+Assert-True ($css.Contains("prefers-reduced-motion")) "CSS should respect reduced motion"
 
 Write-Host "Smoke checks passed."
