@@ -931,7 +931,9 @@ textarea:focus {
 @media (max-width: 767px) {
   .nav-shell,
   .section {
-    width: min(100% - 26px, 390px);
+    width: min(100% - 26px, 350px);
+    margin-left: 20px;
+    margin-right: auto;
   }
 
   .brand strong {
@@ -964,8 +966,9 @@ textarea:focus {
   }
 
   .video-controls {
-    right: 18px;
-    bottom: 18px;
+    right: auto;
+    bottom: 70px;
+    left: 20px;
   }
 
   .scroll-cue {
