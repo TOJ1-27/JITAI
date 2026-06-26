@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="山东吉泰机械有限公司产品详情页，展示液压缸应用、可定制项目和询价所需信息。" />
+    <meta property="og:title" content="液压缸产品详情 | 山东吉泰机械有限公司" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/jitai-hero-poster.svg" />
+    <title>产品详情 | 山东吉泰机械有限公司</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="product-detail-page">
+    <header class="site-header product-header" data-site-header>
+      <div class="top-strip">
+        <span data-i18n="top_company">山东吉泰机械有限公司</span>
+        <span data-i18n="top_scope">液压缸 | 定制代工 | 项目询价</span>
+      </div>
+      <div class="nav-shell">
+        <a
+          class="brand"
+          href="index.html#home"
+          aria-label="山东吉泰机械有限公司首页"
+          data-i18n-aria-label="brand_home_label"
+        >
+          <span class="brand-mark" data-i18n="brand_mark">吉泰</span>
+          <span>
+            <strong data-i18n="company_name">山东吉泰机械有限公司</strong>
+            <small data-i18n="company_tagline">液压缸制造商</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="主导航" data-i18n-aria-label="main_nav_label">
+          <a href="index.html#home" data-i18n="nav_home">首页</a>
+          <a class="is-active" href="index.html#products" data-i18n="nav_products">产品</a>
+          <a href="index.html#about" data-i18n="nav_about">关于我们</a>
+          <a href="index.html#rfq" data-i18n="nav_contact">联系询价</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="language-link" type="button" data-lang-toggle aria-pressed="true" data-i18n="lang_toggle">
+            EN
+          </button>
+          <a class="quote-link" href="index.html#rfq" data-product-rfq data-i18n="nav_quote">发送询价</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="product-detail-main" data-product-detail>
+      <section class="product-detail-hero" aria-label="产品详情" data-i18n-aria-label="product_page_label">
+        <div class="section-heading">
+          <span data-i18n="product_detail_eyebrow">产品详情</span>
+          <h1 data-product-title>液压缸产品</h1>
+          <p data-i18n="product_detail_intro">以下内容用于项目沟通，不包含未经确认的具体技术参数。</p>
+        </div>
+      </section>
+
+      <section class="product-detail-layout">
+        <div class="product-gallery">
+          <div class="product-main-image">
+            <img data-product-main-image src="assets/product-hydraulic-cylinder.svg" alt="产品示意图" />
+          </div>
+          <div
+            class="thumbnail-list"
+            data-product-thumbnails
+            aria-label="产品缩略图"
+            data-i18n-aria-label="thumbnails_label"
+          ></div>
+          <div class="product-pager">
+            <a class="pager-link" href="product.html" data-prev-product>
+              <strong data-i18n="previous_product">上一个产品</strong>
+              <span></span>
+            </a>
+            <a class="pager-link" href="product.html" data-next-product>
+              <strong data-i18n="next_product">下一个产品</strong>
+              <span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-detail-copy">
+          <p class="product-summary" data-product-summary></p>
+          <div class="detail-panel">
+            <h2 data-i18n="product_applications_title">典型应用场景</h2>
+            <p data-product-applications></p>
+          </div>
+          <div class="detail-columns">
+            <div class="detail-panel">
+              <h2 data-i18n="custom_options_title">可定制项目</h2>
+              <ul data-custom-options></ul>
+            </div>
+            <div class="detail-panel">
+              <h2 data-i18n="inquiry_info_title">询价所需信息</h2>
+              <ul data-inquiry-info></ul>
+            </div>
+          </div>
+          <div class="detail-actions">
+            <a class="primary-button" href="index.html#rfq" data-product-rfq data-i18n="send_drawing_quote">
+              发送图纸询价
+            </a>
+            <a class="secondary-button dark" href="index.html#products" data-back-products data-i18n="back_to_products">
+              返回产品中心
+            </a>
+            <button class="share-button" type="button" data-share-product data-i18n="share_product">分享</button>
+          </div>
+          <p class="share-status" data-share-status role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="social-section" aria-labelledby="social-title">
+        <div class="social-follow">
+          <span data-i18n="social_eyebrow">社媒</span>
+          <h2 id="social-title" data-i18n="social_title">社媒账号</h2>
+          <p data-i18n="social_intro">官方账号确认后，可在此连接产品视频、工厂内容和项目动态。</p>
+        </div>
+        <div>
+          <div
+            class="social-links"
+            data-social-links
+            aria-label="社媒账号入口"
+            data-i18n-aria-label="social_links_label"
+          ></div>
+          <p class="social-todo" data-social-empty data-i18n="social_empty">
+            官方社媒链接尚未配置，图标已预留为禁用状态。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong data-i18n="company_name">山东吉泰机械有限公司</strong>
+        <span data-i18n="company_tagline">液压缸制造商</span>
+      </div>
+      <p data-i18n="footer_products">自卸车液压缸 | 农机液压缸 | 工程机械液压缸 | 定制代工液压缸</p>
+      <p>
+        <span data-i18n="footer_copyright_prefix">版权所有</span>
+        &copy;
+        <span data-year></span>
+        <span data-i18n="footer_company_legal">山东吉泰机械有限公司</span>
+      </p>
+    </footer>
+
+    <script type="module" src="assets/product-detail.js"></script>
+  </body>
+</html>

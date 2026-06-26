@@ -38,6 +38,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(projectRoot, "index.html"),
+        product: resolve(projectRoot, "product.html"),
         "mobile-preview": resolve(projectRoot, "mobile-preview.html"),
         404: resolve(projectRoot, "404.html"),
       },
