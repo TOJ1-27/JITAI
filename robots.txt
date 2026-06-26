@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toj1-27.github.io/JITAI/sitemap.xml

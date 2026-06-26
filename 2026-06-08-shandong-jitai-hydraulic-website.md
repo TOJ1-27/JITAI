@@ -22,6 +22,7 @@
 ## Task 1: Smoke Test Skeleton
 
 **Files:**
+
 - Create: `tests/smoke.ps1`
 - Expected missing production files at first: `index.html`, `assets/styles.css`, `assets/app.js`
 
@@ -83,6 +84,7 @@ Expected: FAIL with `index.html should exist`.
 ## Task 2: Static Website Files
 
 **Files:**
+
 - Create: `index.html`
 - Create: `assets/styles.css`
 - Create: `assets/app.js`
@@ -110,6 +112,7 @@ Expected: PASS with `Smoke checks passed.`
 ## Task 3: Manual Browser Verification
 
 **Files:**
+
 - Verify: `index.html`
 
 - [ ] **Step 1: Open production page**
@@ -141,6 +144,7 @@ Expected: navigation wraps cleanly, product cards stack, inquiry fields remain r
 ## Task 4: Handoff Cleanup
 
 **Files:**
+
 - Keep: `index.html`, `assets/styles.css`, `assets/app.js`, `tests/smoke.ps1`
 - Keep as references: `hybrid-direction.html`, `design-directions.html`, `docs/superpowers/specs/2026-06-08-shandong-jitai-hydraulic-website-design.md`
 
